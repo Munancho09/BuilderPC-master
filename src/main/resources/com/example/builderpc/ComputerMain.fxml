@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="802.0" prefWidth="1445.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.builderpc.Controllers.ComputerMainController">
+   <children>
+      <Button fx:id="btnClose" layoutX="1101.0" layoutY="738.0" mnemonicParsing="false" onAction="#btnCloseClick" prefHeight="50.0" prefWidth="83.0" text="На главную" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="30.0" />
+      <VBox prefHeight="802.0" prefWidth="1207.0" spacing="3.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="238.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <TextField fx:id="txtCPU" editable="false" prefHeight="25.0" prefWidth="1130.0" />
+            <TitledPane fx:id="titCPU" expanded="false" text="Процессоры">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tableCPU" editable="true" prefHeight="106.0" prefWidth="1083.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <columns>
+                              <TableColumn fx:id="tcCPUnumber" editable="false" prefWidth="75.0" text="Артикул" />
+                              <TableColumn fx:id="tcCPUmanufacture" editable="false" prefWidth="75.0" text="Производитель" />
+                              <TableColumn fx:id="tcCPUtitle" editable="false" prefWidth="75.0" text="Название" />
+                              <TableColumn fx:id="tcCPUfrequency" editable="false" prefWidth="75.0" text="Частота" />
+                              <TableColumn fx:id="tcCPUPower" editable="false" prefWidth="75.0" text="Энергопотребление" />
+                              <TableColumn fx:id="tcCPUsocket" editable="false" prefWidth="75.0" text="Сокет" />
+                              <TableColumn fx:id="tcCPUarchetype" editable="false" prefWidth="75.0" text="Архитектура" />
+                           </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </TitledPane>
+            <Separator prefHeight="16.0" prefWidth="1207.0" />
+            <TextField fx:id="txtVideoCard" editable="false" />
+            <TitledPane fx:id="titVideoCard" expanded="false" text="Видеокарты">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tableVideoCard" prefHeight="108.0" prefWidth="1085.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <columns>
+                              <TableColumn fx:id="tcVideoCardId" prefWidth="101.0" text="Артикул" />
+                              <TableColumn fx:id="tcVideoCardManufacture" prefWidth="75.0" text="Производитель" />
+                              <TableColumn fx:id="tcVideoCardTitle" prefWidth="75.0" text="Название" />
+                              <TableColumn fx:id="tcVideoCardGCPU" prefWidth="177.0" text="Графический процессор" />
+                              <TableColumn fx:id="tcVideoCardVolumeMemory" prefWidth="115.0" text="Объем памяти" />
+                              <TableColumn fx:id="tcVideoCardTypeMemory" prefWidth="75.0" text="Тип памяти" />
+                              <TableColumn fx:id="tcVideoCardFrequencyMemory" prefWidth="75.0" text="Частота памяти" />
+                              <TableColumn fx:id="tcVideoCardPower" prefWidth="75.0" text="Мощность" />
+                           </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </TitledPane>
+            <Separator prefHeight="16.0" prefWidth="1207.0" />
+            <TextField fx:id="txtRAM" editable="false" />
+            <TitledPane fx:id="titRAM" expanded="false" text="ОЗУ">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tableRAM" prefHeight="106.0" prefWidth="1086.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <columns>
+                              <TableColumn fx:id="tcRAMId" prefWidth="75.0" text="Артикул" />
+                              <TableColumn fx:id="tcRAMManufacturer" prefWidth="75.0" text="Производитель" />
+                              <TableColumn fx:id="tcRAMTitle" prefWidth="75.0" text="Название" />
+                              <TableColumn fx:id="tcRAMTypeMemory" prefWidth="75.0" text="Тип памяти" />
+                              <TableColumn fx:id="tcRAMFrequency" prefWidth="75.0" text="Частота" />
+                              <TableColumn fx:id="tcRAMVolume" prefWidth="75.0" text="Объем" />
+                           </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </TitledPane>
+            <Separator prefHeight="16.0" prefWidth="1207.0" />
+            <TextField fx:id="txtStorage" editable="false" />
+            <TitledPane fx:id="titStorage" expanded="false" text="ПЗУ">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tableStorage" prefHeight="105.0" prefWidth="1090.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                           <columns>
+                              <TableColumn fx:id="tcStorageId" prefWidth="75.0" text="Артикул" />
+                              <TableColumn fx:id="tcStorageManufacturer" prefWidth="75.0" text="Производитель" />
+                              <TableColumn fx:id="tcStorageTitle" prefWidth="75.0" text="Название" />
+                              <TableColumn fx:id="tcStorageVolume" prefWidth="75.0" text="Объем" />
+                              <TableColumn fx:id="tcStorageType" prefWidth="75.0" text="Тип памяти" />
+                              <TableColumn fx:id="tcStorageSteedOfWrite" prefWidth="75.0" text="Скорость записи" />
+                              <TableColumn fx:id="tcStorageSpeedOfRead" prefWidth="75.0" text="Скорость чтения" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </TitledPane>
+            <Separator prefHeight="16.0" prefWidth="1207.0" />
+            <TextField fx:id="txtPowerBlock" editable="false" />
+            <TitledPane fx:id="titPowerBlock" expanded="false" text="Блоки питания">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tablePowerBlock" prefHeight="106.0" prefWidth="1088.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <columns>
+                              <TableColumn fx:id="tcPowerBlockId" prefWidth="75.0" text="Артикул" />
+                              <TableColumn fx:id="tcPowerBlockManufacturer" prefWidth="75.0" text="Производитель" />
+                              <TableColumn fx:id="tcPowerBlockTitle" prefWidth="75.0" text="Название" />
+                              <TableColumn fx:id="tcPowerBlockPower" prefWidth="75.0" text="Мощность" />
+                           </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </TitledPane>
+            <Separator prefHeight="16.0" prefWidth="1207.0" />
+            <TextField fx:id="txtMotherboard" editable="false" />
+            <TitledPane fx:id="titMotherboard" expanded="false" prefWidth="1200.0" text="Материнские платы">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tableMotherboard" layoutY="6.0" prefHeight="100.0" prefWidth="1087.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <columns>
+                              <TableColumn fx:id="tcMotherboardId" prefWidth="75.0" text="Артикул" />
+                              <TableColumn fx:id="tcMotherboardManufacturer" prefWidth="75.0" text="Производитель" />
+                              <TableColumn fx:id="tcMotherboardTitle" prefWidth="75.0" text="Название" />
+                              <TableColumn fx:id="tcMotherboardSocket" prefWidth="75.0" text="Сокет" />
+                              <TableColumn fx:id="tcMotherboardGCPUType" prefWidth="75.0" text="Поддерживаемые видеокарты" />
+                              <TableColumn fx:id="tcMotherboardRAMType" prefWidth="75.0" text="Поддерживаемая ОЗУ" />
+                           </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </TitledPane>
+         </children>
+      </VBox>
+      <Button fx:id="btnAdd" layoutX="1231.0" layoutY="738.0" mnemonicParsing="false" onAction="#btnAddClick" prefHeight="50.0" prefWidth="83.0" text="Добавить" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="131.0" />
+      <TextField fx:id="txtTitle" layoutX="1231.0" layoutY="705.0" prefHeight="25.0" prefWidth="183.0" AnchorPane.bottomAnchor="72.0" AnchorPane.rightAnchor="31.0" />
+      <Text layoutX="1296.0" layoutY="693.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Название" AnchorPane.bottomAnchor="105.98828125" AnchorPane.rightAnchor="96.388671875" />
+      <ListView fx:id="pcListView" layoutX="1212.0" layoutY="33.0" prefHeight="561.0" prefWidth="222.0" AnchorPane.bottomAnchor="208.0" AnchorPane.rightAnchor="11.0" AnchorPane.topAnchor="33.0" />
+      <Text layoutX="1254.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Собранные компьютеры" AnchorPane.rightAnchor="53.5859375" AnchorPane.topAnchor="14.05078125" />
+      <Button fx:id="btnDelete" layoutX="1231.0" layoutY="600.0" mnemonicParsing="false" onAction="#btnDeleteClick" prefHeight="50.0" prefWidth="83.0" text="Удалить" />
+      <Button fx:id="btnEnd" disable="true" layoutX="1339.0" layoutY="600.0" mnemonicParsing="false" onAction="#btnEndClick" prefHeight="50.0" prefWidth="83.0" text="Снять выделение" textAlignment="CENTER" wrapText="true" />
+   </children>
+</AnchorPane>

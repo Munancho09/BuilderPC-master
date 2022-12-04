@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="654.0" prefWidth="488.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.builderpc.Controllers.VideoCardAddController">
+   <children>
+      <ComboBox fx:id="cmbManufacturer" layoutX="169.0" layoutY="73.0" onAction="#cmbManufacturerSwitch" prefWidth="150.0" />
+      <Text layoutX="201.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Производитель" />
+      <TextField fx:id="txtTitle" layoutX="169.0" layoutY="128.0" />
+      <Text layoutX="218.0" layoutY="117.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Название" />
+      <ComboBox fx:id="cmbGCPU" layoutX="169.0" layoutY="198.0" prefWidth="150.0" />
+      <Text layoutX="179.0" layoutY="185.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Графический процесор" />
+      <ComboBox fx:id="cmbTypeMemory" layoutX="169.0" layoutY="259.0" prefWidth="150.0" />
+      <Text layoutX="212.0" layoutY="247.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Тип памяти" />
+      <Text layoutX="185.0" layoutY="307.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Частота видеопамяти" />
+      <ComboBox fx:id="cmbFrequencyMemory" layoutX="168.0" layoutY="322.0" prefWidth="150.0" />
+      <ComboBox fx:id="cmbPower" layoutX="169.0" layoutY="385.0" prefWidth="150.0" />
+      <Text layoutX="215.0" layoutY="372.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Мощность" />
+      <Button fx:id="btnAdd" layoutX="205.0" layoutY="500.0" mnemonicParsing="false" onAction="#btnAddClick" prefHeight="54.0" prefWidth="79.0" text="Добавить" />
+      <Button fx:id="btnClose" layoutX="202.0" layoutY="576.0" mnemonicParsing="false" onAction="#btnCloseClick" prefHeight="54.0" prefWidth="85.0" text="На главную" textAlignment="CENTER" wrapText="true" />
+      <Label fx:id="Errors" layoutX="21.0" layoutY="26.0" />
+      <ComboBox fx:id="cmbVolumeMemory" layoutX="169.0" layoutY="452.0" prefWidth="150.0" />
+      <Text layoutX="204.0" layoutY="441.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Объем памяти" />
+      <Button fx:id="btnGen" layoutX="18.0" layoutY="664.0" mnemonicParsing="false" onAction="#btnGenClick" prefHeight="45.0" prefWidth="451.0" text="Сгенерировать 10 видеокарт" textAlignment="CENTER" wrapText="true" />
+   </children>
+</AnchorPane>
